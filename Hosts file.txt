@@ -1,0 +1,15 @@
+#  System Host Blocker
+#  A lightweight and constantly updated host blocker available for free on GitHub.
+#
+#  Last updated 11 / 2 / 16
+#
+#  Most hosts were found from scratch by me. If you’d like to contribute, please try the GitHub page! Thanks!
+#  Hosts were also added out of alphabetical order. Whoops.
+#
+#  Created by Nathan Goodwin (nathanaccidentally)
+#
+#  You will need root permissions to edit host files on all operating systems.
+
+127.0.0.1 s0.2mdn.net
+127.0.0.1 s.zkcdn.net
+127.0.0.1 pixel.redditmedia.com
