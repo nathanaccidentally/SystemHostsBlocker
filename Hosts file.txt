@@ -1,7 +1,7 @@
 #  System Host Blocker
 #  A lightweight and constantly updated host blocker available for free on GitHub.
 #
-#  Last updated 11 / 2 / 16
+#  Last updated 11 / 3 / 16
 #
 #  Most hosts were found from scratch by me. If you’d like to contribute, please try the GitHub page! Thanks!
 #  Hosts were also added out of alphabetical order. Whoops.
@@ -13,3 +13,9 @@
 127.0.0.1 s0.2mdn.net
 127.0.0.1 s.zkcdn.net
 127.0.0.1 pixel.redditmedia.com
+127.0.0.1 engine.a.redditmedia.com
+127.0.0.1 c.amazon-adsystem.com
+127.0.0.1 pubads.g.doubleclick.net
+127.0.0.1 googleads.g.doubleclick.net
+127.0.0.1 yt3.ggpht.com
+127.0.0.1 secure.insightexpressai.com
