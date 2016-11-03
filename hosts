@@ -1,15 +1,16 @@
-#  System Host Blocker
+#  System Host Blocker (Version 0.0.1)
 #  A lightweight and constantly updated host blocker available for free on GitHub.
 #
 #  Last updated 11 / 3 / 16
 #
 #  Most hosts were found from scratch by me. If you’d like to contribute, please try the GitHub page! Thanks!
-#  Hosts were also added out of alphabetical order. Whoops.
+#  Hosts were added out of alphabetical order.
 #
 #  Created by Nathan Goodwin (nathanaccidentally)
 #
 #  You will need root permissions to edit host files on all operating systems.
 
+#  Ads:
 127.0.0.1 s0.2mdn.net
 127.0.0.1 s.zkcdn.net
 127.0.0.1 pixel.redditmedia.com
@@ -18,3 +19,24 @@
 127.0.0.1 pubads.g.doubleclick.net
 127.0.0.1 googleads.g.doubleclick.net
 127.0.0.1 secure.insightexpressai.com
+127.0.0.1 aka-cnd-ns.adtechus.com
+127.0.0.1 beacon-us-iad2.rubiconproject.com
+127.0.0.1 content.quantcount.com
+127.0.0.1 exch.quantserve.com
+127.0.0.1 pagead2.googlesyndication.com
+127.0.0.1 pixel.quantcount.com
+127.0.0.1 z.moatads.com
+127.0.0.1 lax1-ib.adnxs.com
+127.0.0.1 big.g.doubleclick.net
+127.0.0.1 c.betrad.com
+127.0.0.1 fw.adsafeprotected.com
+127.0.0.1 stats.g.doubleclick.net
+127.0.0.1 hymnal-prod.vox-cnd.com
+127.0.0.1 player.ooyala.com
+127.0.0.1 partner.googleadservices.com
+
+#  Tracking:
+127.0.0.1 l.ooyala.com
+127.0.0.1 ad.doubleclick.net
+127.0.0.1 google-analytics.com
+127.0.0.1 static.chartbeat.com
