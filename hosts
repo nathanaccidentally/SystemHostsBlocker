@@ -1,7 +1,21 @@
+##
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting. Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1 localhost
+fe80::1%lo0	localhost
+
+#===============================================================
+#
 #  System Host Blocker (Version 0.0.1)
 #  A lightweight and constantly updated host blocker available for free on GitHub.
 #
-#  Last updated 11/3/16
+#  Last updated 11/4/16
 #
 #  Most hosts were found from scratch by me. If you’d like to contribute, please try the GitHub page! Thanks!
 #  Hosts were added out of alphabetical order.
