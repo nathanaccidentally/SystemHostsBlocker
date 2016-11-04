@@ -29,7 +29,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 9. Save the host file and close TextEdit. You're all done!
 
 **Method 2: (Git)**
-```git clone github.com/nathanaccidentally/SystemHostBlocker/blob/master/hosts /private/etc/```
+```git clone https://github.com/nathanaccidentally/SystemHostBlocker /private/etc/```
 
 ## Installation on a Windows PC
 **Method 1: (Manual)**
@@ -40,4 +40,4 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 4. Close Notepad! You're done!
 
 **Method 2: (Git)**
-```git clone github.com/nathanaccidentally/SystemHostBlocker/blob/master/hosts C:\Windows\System32\drivers\etc\```
+```git clone https://github.com/nathanaccidentally/SystemHostBlocker C:\Windows\System32\drivers\etc\```
