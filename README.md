@@ -34,3 +34,9 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 1. Open Explorer and go to ```C:\Windows\System32\drivers\etc\hosts```
 3. Drag the hosts file from the zip download into the folder
 4. Accept the replacement! You're done!
+
+## Installation on iOS (Jailbroken)
+1. Download the deb file from this repository
+2. Open in Filza or iFile
+3. Run deb installer
+4. Repring! You're done!
