@@ -36,7 +36,13 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 4. Accept the replacement! You're done!
 
 ## Installation on iOS (Jailbroken)
-1. Download the deb file from this repository
-2. Open in Filza or iFile
-3. Run deb installer
-4. Repring! You're done!
+1. Copy hosts file from /etc/hosts
+2. Create a new folder in /etc/ called 'StockHost' and paste the file in it. 
+3. Go back to /etc/hosts and replace the host file with the downloaded one.
+4. You're done!
+
+**UNINSTALLING:**
+1. Delete /etc/hosts
+2. Go to /etc/StockHost/ and copy the host file
+3. Paste it in /etc/
+5. Done!
