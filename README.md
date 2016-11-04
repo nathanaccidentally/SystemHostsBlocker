@@ -6,16 +6,17 @@ SimpleHostBlocker is an alternative to an ad blocker that works system wide, eve
 ## Blocks Ads
 As well as speeding up your browser, SystemHostsBlocker also blocks ads and trackers and can prevent you from spyware, malicious ads, and popups that take up your whole page. This works by blocking the host of the ads.
 
-## Block Maleware
-SystemHostBlocker will also help your computer to say safe from maleware and spyware by blocking malicious sources and sites that may or have been proven to include maleware.
+## Block Malaware
+SystemHostBlocker will also help your computer to say safe from malaware and spyware by blocking malicious sources and sites that may or have been proven to include malaware.
 
-**THE MAJORITY OF THE MALEWARE SITES WERE SOURCED FROM [MALEWARE DOMAIN LIST](http://www.malwaredomainlist.com/)**
+**THE MAJORITY OF THE MALAWARE SITES WERE SOURCED FROM [MALEWARE DOMAIN LIST](http://www.malwaredomainlist.com/)**
 
 # Downloads
 1. [Unified Blocker (Blocks Ads, Trackers, Malicious Websites, all the goodies.)](https://github.com/nathanaccidentally/SystemHostBlocker/raw/master/hosts.zip)
 2. More options soon!
 
 ## Installation on Mac OS
+**Method 1: (Manual)**
 1. Right click the Finder icon in your application bar, and click 'Go to Folder'
 2. Then type ```/private/``` and hit enter.
 3. Right click on the folder titled ```etc``` and click 'Get Info'
@@ -26,8 +27,15 @@ SystemHostBlocker will also help your computer to say safe from maleware and spy
 8. Paste in the contents of the SystemHostBlocker host file **BELOW** the text already in the host file. Failure to do this will result in internet not working and a possible failure to boot (as i've been told.)
 9. Save the host file and close TextEdit. You're all done!
 
+**Method 2: (Git)**
+```git clone github.com/nathanaccidentally/SystemHostBlocker/blob/master/hosts /private/etc/```
+
 ## Installation on a Windows PC
+**Method 1: (Manual)**
 1. Open Explorer and go to ```C:\Windows\System32\drivers\etc\hosts```
 2. Open the hosts file with Notepad
 3. Paste the contents of SystemHostsBlocker **BELOW** the text already set in the host file. ailure to do this will result in internet not working and a possible failure to boot (as i've been told.)
 4. Close Notepad! You're done!
+
+**Method 2: (Git)**
+```git clone github.com/nathanaccidentally/SystemHostBlocker/blob/master/hosts C:\Windows\System32\drivers\etc\```
