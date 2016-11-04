@@ -63,7 +63,6 @@ fe80::1%lo0	localhost
 127.0.0.1 www.google-analytics.com
 127.0.0.1 www.googleadservices.com
 127.0.0.1 www.googletagservices.com
-127.0.0.1 partner.googleadservices.com
 127.0.0.1 tpc.googlesyndication.com
 
 
