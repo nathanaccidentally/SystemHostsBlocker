@@ -28,16 +28,9 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 8. Paste in the contents of the SystemHostBlocker host file **BELOW** the text already in the host file. Failure to do this will result in internet not working and a possible failure to boot (as i've been told.)
 9. Save the host file and close TextEdit. You're all done!
 
-**Method 2: (Git)**
-```git clone https://github.com/nathanaccidentally/SystemHostBlocker /private/etc/```
-
 ## Installation on a Windows PC
 **Method 1: (Manual)**
 
 1. Open Explorer and go to ```C:\Windows\System32\drivers\etc\hosts```
-2. Open the hosts file with Notepad
-3. Paste the contents of SystemHostsBlocker **BELOW** the text already set in the host file. ailure to do this will result in internet not working and a possible failure to boot (as i've been told.)
-4. Close Notepad! You're done!
-
-**Method 2: (Git)**
-```git clone https://github.com/nathanaccidentally/SystemHostBlocker C:\Windows\System32\drivers\etc\```
+3. Drag the hosts file from the zip download into the folder
+4. Accept the replacement! You're done!
