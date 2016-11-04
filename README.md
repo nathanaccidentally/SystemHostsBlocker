@@ -17,6 +17,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 
 ## Installation on Mac OS
 **Method 1: (Manual)**
+
 1. Right click the Finder icon in your application bar, and click 'Go to Folder'
 2. Then type ```/private/``` and hit enter.
 3. Right click on the folder titled ```etc``` and click 'Get Info'
@@ -32,6 +33,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 
 ## Installation on a Windows PC
 **Method 1: (Manual)**
+
 1. Open Explorer and go to ```C:\Windows\System32\drivers\etc\hosts```
 2. Open the hosts file with Notepad
 3. Paste the contents of SystemHostsBlocker **BELOW** the text already set in the host file. ailure to do this will result in internet not working and a possible failure to boot (as i've been told.)
