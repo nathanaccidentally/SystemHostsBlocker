@@ -1,14 +1,18 @@
 #  System Host Blocker (Version 0.0.1)
 #  A lightweight and constantly updated host blocker available for free on GitHub.
 #
-#  Last updated 11 / 3 / 16
+#  Last updated 11/3/16
 #
 #  Most hosts were found from scratch by me. If you’d like to contribute, please try the GitHub page! Thanks!
 #  Hosts were added out of alphabetical order.
 #
+#  Submit contributions to: 
+#  https://github.com/nathanaccidentally/SystemHostBlocker/issues
+#
 #  Created by Nathan Goodwin (nathanaccidentally)
 #
 #  You will need root permissions to edit host files on all operating systems.
+#  Please do NOT remove anything already in your host file as it may break your connection permanantly.
 
 #  Ads:
 127.0.0.1 s0.2mdn.net
