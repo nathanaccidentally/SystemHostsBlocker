@@ -42,6 +42,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 4. You're done!
 
 **UNINSTALLING:**
+
 1. Delete /etc/hosts
 2. Go to /etc/StockHost/ and copy the host file
 3. Paste it in /etc/
