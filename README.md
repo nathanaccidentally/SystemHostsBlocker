@@ -13,7 +13,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 
 # Downloads
 1. [Unified Blocker (Blocks Ads, Trackers, Malicious Websites, all the goodies.)](https://github.com/nathanaccidentally/SystemHostBlocker/raw/master/hosts.zip)
-2. [Updating Script for Windows](https://dl.dropboxusercontent.com/s/bfi93prxl8jop6h/updatehosts.bat?dl=0)
+2. [Updating Script for Windows](https://dl.dropboxusercontent.com/s/m46ei5iyki9yovs/updatehosts.bat?dl=0)
 
 ## Installation on Mac OS
 **Method 1: (Manual)**
