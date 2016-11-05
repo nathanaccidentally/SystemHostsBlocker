@@ -13,7 +13,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 
 # Downloads
 1. [Unified Blocker (Blocks Ads, Trackers, Malicious Websites, all the goodies.)](https://github.com/nathanaccidentally/SystemHostBlocker/raw/master/hosts.zip)
-2. More options soon!
+2. [Updating Script for Windows](https://dl.dropboxusercontent.com/s/bfi93prxl8jop6h/updatehosts.bat?dl=0)
 
 ## Installation on Mac OS
 **Method 1: (Manual)**
@@ -49,3 +49,12 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 2. Go to /etc/StockHost/ and copy the host file
 3. Paste it in /etc/
 5. Done!
+
+## Updating Windows Script
+
+1. Install [Git](https://git-scm.com/downloads)
+2. Install the [Updating Script for Windows](https://github.com/nathanaccidentally/SystemHostBlocker#downloads)
+3. Edit the file and replace ```(User)``` with your username.
+4. Right click and run as admin. Your hosts will update!
+
+You can keep running this and each time you do it will install the latest version of SystemHostsBlocker.
