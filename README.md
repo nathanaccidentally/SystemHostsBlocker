@@ -18,20 +18,22 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 ## Installation on Mac OS
 **Method 1: (Manual)**
 
-1. Right click the Finder icon in your application bar, and click 'Go to Folder'
-2. Then type ```/private/``` and hit enter.
-3. Right click on the folder titled ```etc``` and click 'Get Info'
-4. In the bottom right corner, click the lock icon and type in an admin password to unlock it.
-5. Then, at the bottom, chage all user permissions to read and write.
-6. Hit the gear icon in the bottom left corner and click 'Apply to enclosed items' and hit confirm.
-7. Next find your host file in the folder ```etc``` and double click to open in TextEdit.
-8. Paste in the contents of the SystemHostBlocker host file **BELOW** the text already in the host file. Failure to do this will result in internet not working and a possible failure to boot (as i've been told.)
-9. Save the host file and close TextEdit. You're all done!
+1. Download the blocker from the Downloads section of the readme file and extract it to your desktop
+2. Right click the Finder icon in your application bar, and click 'Go to Folder'
+3. Then type ```/private/``` and hit enter.
+4. Right click on the folder titled ```etc``` and click 'Get Info'
+5. In the bottom right corner, click the lock icon and type in an admin password to unlock it.
+6. Then, at the bottom, chage all user permissions to read and write.
+7. Hit the gear icon in the bottom left corner and click 'Apply to enclosed items' and hit confirm.
+8. Next find your host file in the folder ```etc``` and double click to open in TextEdit.
+9. Paste in the contents of the SystemHostBlocker host file **BELOW** the text already in the host file. Failure to do this will result in internet not working and a possible failure to boot (as i've been told.)
+10. Save the host file and close TextEdit. You're all done!
 
 ## Installation on a Windows PC
 **Method 1: (Manual)**
 
-1. Open Explorer and go to ```C:\Windows\System32\drivers\etc\hosts```
+1. Download the blocker from the Downloads section of the readme file and extract it to your desktop
+2. Open Explorer and go to ```C:\Windows\System32\drivers\etc\hosts```
 3. Drag the hosts file from the zip download into the folder
 4. Accept the replacement! You're done!
 
