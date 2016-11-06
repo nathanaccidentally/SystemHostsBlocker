@@ -14,6 +14,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 # Downloads
 1. [Unified Blocker (Blocks Ads, Trackers, Malicious Websites, all the goodies.)](https://github.com/nathanaccidentally/SystemHostBlocker/raw/master/hosts.zip)
 2. [Updating Script for Windows](https://dl.dropboxusercontent.com/s/m46ei5iyki9yovs/updatehosts.bat?dl=0)
+3. [iOS Unified Blocker](https://github.com/nathanaccidentally/SystemHostBlocker/raw/master/iosblocker.zip)
 
 ## Installation on Mac OS
 **Method 1: (Manual)**
@@ -38,17 +39,18 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 4. Accept the replacement! You're done!
 
 ## Installation on iOS (Jailbroken)
-1. Copy hosts file from /etc/hosts
-2. Create a new folder in /etc/ called 'StockHost' and paste the file in it. 
-3. Go back to /etc/hosts and replace the host file with the downloaded one.
-4. You're done!
+1. Download iOS Unified Blocker from the Downloads section.
+2. Open the zip file in iFile or Filza and unzip it.
+3. Delete the hosts file in ```/etc/hosts```
+3. Go back to the folder you unzipped and copy the file called ```systemhostblocker``` and paste it in ```/etc/```
+4. Rename the newly pasted file to ```hosts``` and save it.
 
 **UNINSTALLING:**
 
-1. Delete /etc/hosts
-2. Go to /etc/StockHost/ and copy the host file
-3. Paste it in /etc/
-5. Done!
+1. Delete the hosts file at ```/etc/hosts```
+2. Go to the folder you unzipped when you downloaded the blocker (iosblocker.zip)
+3. Copy the file titled ```stockhost```
+4. Move it to ```/etc/``` and rename the file ```hosts```
 
 ## Updating Windows Script
 
