@@ -1,4 +1,0 @@
-git clone https://github.com/nathanaccidentally/SystemHostBlocker ~/Desktop/
-cd ~/Desktop/SystemHostBlocker
-sudo cp hosts /private/etc/
-sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
