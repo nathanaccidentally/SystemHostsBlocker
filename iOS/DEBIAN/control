@@ -1,0 +1,11 @@
+Package: com.nathanaccidentally.systemhostsblocker
+Name: Minimal Hosts Blocker
+Version: 1.1
+Architecture: iphoneos-arm
+Pre-Depends: dpkg (>= 1.13.25-5)
+Conflicts: com.thireus.untrustedhostsblockerexperimental, com.thireus.untrustedhostsblockerlight, com.thireus.untrustedhostsblocker, com.myrepospace.reddestdream.minimal, com.myrepospace.basic.basic, com.reddestdream.minimalhostsblocker
+Description: A fast and lightweight ad blocker.
+Depiction: https://nathanaccidentally.github.io/depic/systemhosts/index.html
+Maintainer: nathanaccidentally <nathanaccidentally@gmail.com>
+Author: nathanaccidentally <nathanaccidentally@gmail.com>
+Section: Tweaks
