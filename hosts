@@ -91,13 +91,12 @@ fe80::1%lo0	localhost
 172.0.0.1 srv.bysellads.com
 
 # Spotify General:
-172.0.0.1 spclient.wg.spotify.com
-172.0.0.1 adeventtracker.spotify.com
-172.0.0.1 ads-fa.spotify.com
-172.0.0.1 analytics.spotify.com
-172.0.0.1 audio2.spotify.com
-172.0.0.1 crashdump.spotify.com
-172.0.0.1 log.spotify.com
+# spclient.wg.spotify.com
+# ads-fa.spotify.com
+# analytics.spotify.com
+# audio2.spotify.com
+# crashdump.spotify.com
+# log.spotify.com
 # That should kill off most of Spotify's ads and tracking
 # in one swing. Also, this is combined with the ad list
 # above so it should also block 3rd party ads as well as
