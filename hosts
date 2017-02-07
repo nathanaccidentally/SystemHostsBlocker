@@ -26,7 +26,7 @@ fe80::1%lo0	localhost
 #  Created by Nathan Goodwin (nathanaccidentally)
 #
 #  You will need root permissions to edit host files on all operating systems.
-#  Please do NOT remove anything already in your host file as it may break your connection permanantly.
+#  Please do NOT remove anything already in your host file as it may break your connection permenantly.
 
 # General Ads/Basic-Tracking:
 172.0.0.1 s0.2mdn.net
@@ -111,6 +111,8 @@ fe80::1%lo0	localhost
 # remotley be triggered is at a reasonable enough level
 # that you should consider leaving these rules enabled.
 
+# iOS OTA/Updates
+172.0.0.1 mesu.apple.com
 
 #  Malicious/Spyware/Phishing: (All from malwaredomainlist.com currently)
 172.0.0.1  localhost
