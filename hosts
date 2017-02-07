@@ -92,6 +92,7 @@ fe80::1%lo0	localhost
 172.0.0.1 iad-usadmm.dotomi.com
 172.0.0.1 pixel.adsafeprotective.com
 172.0.0.1 s-usweb.dotomi.com
+172.0.0.1 cdn.chitika.net
 
 # Spotify General:
 # spclient.wg.spotify.com
