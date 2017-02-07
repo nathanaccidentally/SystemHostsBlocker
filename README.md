@@ -45,6 +45,10 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 3. Go back to the folder you unzipped and copy the file called ```systemhostblocker``` and paste it in ```/etc/```
 4. Rename the newly pasted file to ```hosts``` and save it.
 
+**OR**
+1. Add the repo https://nathanaccidentally.github.io to Cydia
+2. Install System Hosts Blocker **Using this method does not require the Uninstall step below!**
+
 **UNINSTALLING:**
 
 1. Delete the hosts file at ```/etc/hosts```
