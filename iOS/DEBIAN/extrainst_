@@ -5,7 +5,7 @@ if [[ $1 == install ]]; then
 echo "Backing up original hosts file..."
 mkdir /etc/BackupHosts
 cp -a /etc/hosts /etc/BackupHosts/originalhosts
-chmod 0644 /etc/BackupHosts/originalhosts
+chmod 644 /etc/BackupHosts/originalhosts
 chown root:wheel /etc/BackupHosts/originalhosts
 
 exit 0
@@ -17,7 +17,7 @@ if [[ $1 == upgrade && $2 == 7.2 || $1 == upgrade && $2 == 7.1 ]]; then
 echo "Upgrade from 7.2/7.1 detected. Creating Backup from Stock."
 mkdir /etc/BackupHosts
 cp -a /etc/SystemHostsBlocker/hostsstock /etc/BackupHosts/originalhosts
-chmod 0644 /etc/BackupHosts/originalhosts
+chmod 644 /etc/BackupHosts/originalhosts
 chown root:wheel /etc/BackupHosts/originalhosts
 exit 0
 
