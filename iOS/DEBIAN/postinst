@@ -1,11 +1,14 @@
 #!/bin/bash
 
-echo "Overwriting hosts file..."
+echo "Overwriting old hosts file..."
 cp -a /etc/SystemHostsBlocker/systemhosts /etc/hosts
+echo "Fixing permissions..."
+chmod 0644 /etc/hosts
+chown root:wheel /etc/hosts
 echo "Killing discoveryd/mDNSResponder..."
 killall -9 discoveryd
 killall -9 mDNSResponder
-echo "Should have died and restarted by now..."
-echo "Enjoy SystemHostsBlocker!"
-echo "Please let me know if you find any ads or broken sites!"
+echo "The daemons should have died and restarted by now..."
+echo "Enjoy an ad free iOS with SystemHostsBlocker!"
+echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
 exit 0
