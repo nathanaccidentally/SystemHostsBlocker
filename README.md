@@ -56,11 +56,9 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 3. Copy the file titled ```stockhost```
 4. Move it to ```/etc/``` and rename the file ```hosts```
 
-## Updating Windows Script
+## Installing on Chrome/OS
 
-1. Install [Git](https://git-scm.com/downloads)
-2. Install the [Updating Script for Windows](https://github.com/nathanaccidentally/SystemHostBlocker#downloads)
-3. Edit the file and replace ```(User)``` with your username.
-4. Right click and run as admin. Your hosts will update!
-
-You can keep running this and each time you do it will install the latest version of SystemHostsBlocker.
+1. Download extension Host Switch Plus
+2. Copy the hosts file from this repo.
+3. Go to Options cnd click 'Bulk Add'
+4. Paste in the hosts file and click go!
