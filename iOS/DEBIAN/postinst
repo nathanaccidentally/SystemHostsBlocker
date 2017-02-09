@@ -3,8 +3,8 @@
 echo "Overwriting old hosts file..."
 cp -a /etc/SystemHostsBlocker/systemhosts /etc/hosts
 echo "Fixing permissions..."
-chmod 644 /etc/hosts
-chown root:wheel /etc/hosts
+chmod 644 /etc/hosts /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocker/systemhosts
+chown root:wheel /etc/hosts /etc/SystemHostsBlocker/ /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocker/systemhosts
 echo "Killing discoveryd/mDNSResponder..."
 killall -9 discoveryd
 killall -9 mDNSResponder
