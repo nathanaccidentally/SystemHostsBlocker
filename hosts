@@ -106,6 +106,7 @@ fe80::1%lo0	localhost
 0.0.0.0 rtb-fe-us-e5.content.ad
 0.0.0.0 ruby.adsnative.com
 0.0.0.0 static.adsnative.com
+0.0.0.0 ssl.google-analytics.com
 
 # Spotify General:
 # spclient.wg.spotify.com
