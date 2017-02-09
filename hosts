@@ -99,6 +99,14 @@ fe80::1%lo0	localhost
 0.0.0.0 pagead2.googlesyndication.com
 0.0.0.0 ads.yeildmo.com
 0.0.0.0 gstatic.com
+0.0.0.0 disqusads.com
+0.0.0.0 bevo-us-east-1.adsnative.come
+0.0.0.0 d3dytsf4vjn5x.cloudfront.net
+0.0.0.0 media.disquscdn.com
+0.0.0.0 rtb-fe-us-e5.content.ad
+0.0.0.0 ruby.adsnative.com
+0.0.0.0 static.adsnative.com
+0.0.0.0 ssl.google-analytics.com
 
 # Spotify General:
 # spclient.wg.spotify.com
