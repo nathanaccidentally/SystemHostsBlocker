@@ -12,10 +12,10 @@ fe80::1%lo0	localhost
 
 #===============================================================
 #
-#  System Host Blocker (Version 0.0.2)
+#  System Host Blocker (Version 0.0.3)
 #  A lightweight and constantly updated host blocker available for free on GitHub.
 #
-#  Last updated 2/8/17
+#  Last updated 2/11/17
 #
 #  Most hosts were found from scratch by me. If you’d like to contribute, please try the GitHub page! Thanks!
 #  Hosts were added out of alphabetical order.
