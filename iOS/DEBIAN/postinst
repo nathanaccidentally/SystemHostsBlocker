@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "Stashing old hosts file..."
-mkdir /etc/StashedHosts
-cp -a /etc/hosts /etc/StashedHosts/originalhosts
-chmod 644 /etc/StashedHosts/originalhosts
-chown root:wheel /etc/StashedHosts/originalhosts
+mkdir /etc/SystemHostsBlocker/StashedHosts
+cp -a /etc/hosts /etc/SystemHostsBlocker/StashedHosts/originalhosts
+chmod 644 /etc/SystemHostsBlocker/StashedHosts/originalhosts
+chown root:wheel /etc/SystemHostsBlocker/StashedHosts/originalhosts
 echo "Stashing old hosts file complete..."
 
 echo "Overwriting old hosts file..."
