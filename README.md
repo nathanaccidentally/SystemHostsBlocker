@@ -47,6 +47,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 4. Rename the newly pasted file to ```hosts``` and save it.
 
 **OR**
+
 1. Add the repo https://nathanaccidentally.github.io to Cydia
 2. Install System Hosts Blocker **Using this method does not require the Uninstall step below!**
 
