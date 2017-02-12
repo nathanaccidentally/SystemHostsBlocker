@@ -1,6 +1,6 @@
 Package: com.nathanaccidentally.systemhostsblocker
 Name: System Hosts Blocker
-Version: 1.2.6
+Version: 1.3.0
 Architecture: iphoneos-arm
 Pre-Depends: dpkg (>= 1.13.25-5)
 Conflicts: com.thireus.untrustedhostsblockerexperimental, com.thireus.untrustedhostsblockerlight, com.thireus.untrustedhostsblocker, com.myrepospace.reddestdream.minimal, com.myrepospace.basic.basic, com.reddestdream.minimalhostsblocker
