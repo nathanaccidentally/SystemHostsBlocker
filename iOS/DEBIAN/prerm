@@ -2,8 +2,8 @@
 
 if [[ $1 == remove ]]; then
 
-echo "Restoring Default Hosts File..."
-cp -a /etc/BackupHosts/originalhosts /etc/hosts
+echo "Restoring stashed host file..."
+cp -a /etc/SystemHostsBlocker/StashedHosts/originalhosts /etc/hosts
 echo "Restore completed. Fixing permissions..."
 chmod 644 /etc/hosts
 chown root:wheel /etc/hosts
@@ -14,8 +14,7 @@ killall -9 mDNSResponder
 echo "The Daemons should have died and restarted by now..."
 echo "Cleaning up the mess..."
 rm -rf /etc/SystemHostsBlocker
-rm -rf /etc/BackupHosts
-echo "You should be reset back to the default hosts file now!"
+echo "You should be reset back to the stashed hosts file now!"
 exit 0
 
 else
