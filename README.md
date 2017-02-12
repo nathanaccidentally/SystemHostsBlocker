@@ -6,6 +6,8 @@ SimpleHostBlocker is an alternative to an ad blocker that works system wide, eve
 ## Blocks Ads
 As well as speeding up your browser, SystemHostsBlocker also blocks ads and trackers and can prevent you from spyware, malicious ads, and popups that take up your whole page. This works by blocking the host of the ads.
 
+**A lot of entries on this list are from AdAway.org**
+
 ## Block Malaware
 SystemHostBlocker will also help your computer to say safe from malaware and spyware by blocking malicious sources and sites that may or have been proven to include malaware.
 
