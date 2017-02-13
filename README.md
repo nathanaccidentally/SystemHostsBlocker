@@ -18,6 +18,7 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 2. [Updating Script for Windows](https://dl.dropboxusercontent.com/s/m46ei5iyki9yovs/updatehosts.bat?dl=0)
 3. [iOS Unified Blocker](https://github.com/nathanaccidentally/SystemHostBlocker/raw/master/iosblocker.zip)
 4. [Cydia Repo](https://nathanaccidentally.github.io)
+5. [iOS Deb (1.3.0b)](https://github.com/nathanaccidentally/SystemHostsBlocker/raw/master/iOS/com.nathanaccidentally.systemhostsblocker_1.3.0_iphoneos-arm.deb)
 
 ## Installation on Mac OS
 **Method 1: (Manual)**
