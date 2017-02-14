@@ -14,6 +14,9 @@ then
   killall -9 discoveryd
   killall -9 mDNSResponder
   echo "The daemons should have died and restarted by now..."
+	echo "Getting host line ammount..."
+	lines=$(cat /etc/hosts | wc -l)
+	echo "Your hosts file now has $lines lines!"
   echo "Enjoy an ad free iOS with SystemHostsBlocker!"
   echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
   exit 0
@@ -36,6 +39,9 @@ else
   killall -9 discoveryd
   killall -9 mDNSResponder
   echo "The daemons should have died and restarted by now..."
+	echo "Getting host line ammount..."
+	lines=$(cat /etc/hosts | wc -l)
+	echo "Your hosts file now has $lines lines!"
   echo "Enjoy an ad free iOS with SystemHostsBlocker!"
   echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
   exit 0

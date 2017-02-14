@@ -107,6 +107,11 @@ fe80::1%lo0	localhost
 0.0.0.0 ruby.adsnative.com
 0.0.0.0 static.adsnative.com
 0.0.0.0 ssl.google-analytics.com
+0.0.0.0 ak.sail-horizon.com
+0.0.0.0 cdn-akamai.mookie1.com
+0.0.0.0 cdn.taboola.com
+0.0.0.0 images.taboola.com
+0.0.0.0 resources.taboola.com
 
 # Spotify General:
 # spclient.wg.spotify.com
