@@ -30,9 +30,9 @@ SystemHostBlocker will also help your computer to say safe from malaware and spy
 5. In the bottom right corner, click the lock icon and type in an admin password to unlock it.
 6. Then, at the bottom, chage all user permissions to read and write.
 7. Hit the gear icon in the bottom left corner and click 'Apply to enclosed items' and hit confirm.
-8. Next find your host file in the folder ```etc``` and double click to open in TextEdit.
-9. Paste in the contents of the SystemHostBlocker host file **BELOW** the text already in the host file. Failure to do this will result in internet not working and a possible failure to boot (as i've been told.)
-10. Save the host file and close TextEdit. You're all done!
+8. Next, drag in the hosts file from the SHB repo.
+9. Open Terminal and type ```chmod 644 /private/etc/hosts```
+10. Thats it!
 
 ## Installation on a Windows PC
 **Method 1: (Manual)**
