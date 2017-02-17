@@ -1,10 +1,19 @@
 #!/bin/bash
 
+echo "Copyright Nathan Goodwin 2016-2017."
+echo "Starting install of SystemHostsBlocker for iOS 10.2 and below."
+
+iosVersion=$(sw_vers -productVersion)
+
+echo "You're on version $iosVersion. If you are on iOS 10.3 and above, this may not work due to a different filesystem. Please use with caution."
+
 echo "Checking if stash already exists..."
 file="/etc/SystemHostsBlocker/StashedHosts/originalhosts"
 if [ -f "$file" ]
 then
 	echo "$file found. Running update. Not stashing."
+	blines=$(cat /etc/hosts | wc -l)
+	echo "Before update, you have $blines lines in your hosts file."
   echo "Overwriting old hosts file..."
   cp -a /etc/SystemHostsBlocker/systemhosts /etc/hosts
   echo "Fixing permissions..."
@@ -14,6 +23,9 @@ then
   killall -9 discoveryd
   killall -9 mDNSResponder
   echo "The daemons should have died and restarted by now..."
+	echo "Getting host line ammount..."
+	lines=$(cat /etc/hosts | wc -l)
+	echo "Your hosts file now has $lines lines!"
   echo "Enjoy an ad free iOS with SystemHostsBlocker!"
   echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
   exit 0
@@ -27,6 +39,8 @@ else
   chown root:wheel /etc/SystemHostsBlocker/StashedHosts/originalhosts
   echo "Stashing old hosts file complete..."
   echo "Running installer..."
+	blines=$(cat /etc/hosts | wc -l)
+	echo "Before installing, you have $blines lines in your hosts file."
   echo "Overwriting old hosts file..."
   cp -a /etc/SystemHostsBlocker/systemhosts /etc/hosts
   echo "Fixing permissions..."
@@ -36,6 +50,9 @@ else
   killall -9 discoveryd
   killall -9 mDNSResponder
   echo "The daemons should have died and restarted by now..."
+	echo "Getting host line ammount..."
+	lines=$(cat /etc/hosts | wc -l)
+	echo "Your hosts file now has $lines lines!"
   echo "Enjoy an ad free iOS with SystemHostsBlocker!"
   echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
   exit 0
