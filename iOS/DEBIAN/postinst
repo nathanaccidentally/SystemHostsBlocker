@@ -5,13 +5,7 @@ echo "Starting install of SystemHostsBlocker for iOS 10.2 and below."
 
 iosVersion=$(sw_vers -productVersion)
 
-if [ "$iosVersion" ≤ "10.2" ]
-then
-    echo "You're on a supported version ($iosVersion). Installing."
-else
-    echo "You're on a version ($iosVersion) that is currently not supported. Check for an update soon!"
-		&& exit
-fi
+echo "You're on version $iosVersion. If you are on iOS 10.3 and above, this may not work due to a different filesystem. Please use with caution."
 
 echo "Checking if stash already exists..."
 file="/etc/SystemHostsBlocker/StashedHosts/originalhosts"
