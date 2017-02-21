@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Attempting to stash current hosts file..."
+echo "Make sure to run as root."
+
+echo "Stashing current hosts file..."
+mkdir /etc/SystemHostsBlocker/StashedHosts
+cp -a /etc/hosts /etc/SystemHostsBlocker/StashedHosts/originalhosts
+chmod 644 /etc/SystemHostsBlocker/StashedHosts/originalhosts
+chown root:wheel /etc/SystemHostsBlocker/StashedHosts/originalhosts
+echo "Stashing hosts file complete..."
+echo "You will restore to this file on uninstall."

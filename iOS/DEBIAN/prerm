@@ -15,7 +15,10 @@ killall -9 discoveryd
 killall -9 mDNSResponder
 echo "The Daemons should have died and restarted by now..."
 blines=$(cat /etc/hosts | wc -l)
-	echo "You now have $blines lines in your hosts file."
+echo "You now have $blines lines in your hosts file."
+echo "Reverting Activator..."
+./etc/SystemHostsBlocker/ractivator
+echo "Activator changes should be reverted."	
 echo "Cleaning up the mess..."
 rm -rf /etc/SystemHostsBlocker
 echo "You should be reset back to the stashed hosts file now!"
