@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Attempting to disable System Hosts Blocker..."
+echo "Make sure to run as root."
+
+echo "Restoring to stashed hosts..."
+cp -a /etc/SystemHostsBlocker/StashedHosts/originalhosts /etc/hosts
+echo "Restore completed. Fixing permissions..."
+chmod 644 /etc/hosts
+chown root:wheel /etc/hosts
+killall -9 discoveryd
+killall -9 mDNSResponder
+echo "Done!"
