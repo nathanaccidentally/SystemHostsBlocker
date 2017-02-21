@@ -5,7 +5,9 @@ echo "Make sure to run as root."
 
 echo "Restoring to SHB hosts..."
 echo "Overwriting old hosts file..."
-cp -a /etc/SystemHostsBlocker/systemhosts /etc/hosts
-chmod 644 /etc/hosts /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocker/systemhosts
-chown root:wheel /etc/hosts /etc/SystemHostsBlocker/ /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocker/systemhosts
+cp -a /etc/SystemHostsBlocker/StashedHosts/stash2 /etc/hosts
+chmod 644 /etc/hosts
+chown root:wheel /etc/hosts
 echo "Done!"
+
+exit

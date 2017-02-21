@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Attempting to restore to original hosts file..."
+echo "Make sure to run as root."
+
+echo "Restoring to default hosts..."
+echo "Overwriting current hosts file..."
+cp -a /etc/SystemHostsBlocker/defaulthosts /etc/hosts
+chmod 644 /etc/hosts /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocker/systemhosts
+chown root:wheel /etc/hosts /etc/SystemHostsBlocker/ /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocker/systemhosts
+echo "Done!"
+echo "You'll need to run the enable script to restore functionality."
+
+exit

@@ -16,6 +16,8 @@ killall -9 mDNSResponder
 echo "The Daemons should have died and restarted by now..."
 blines=$(cat /etc/hosts | wc -l)
 	echo "You now have $blines lines in your hosts file."
+echo "Removing Activator permissions..."
+./etc/SystemHostsBlocker/ractivator
 echo "Cleaning up the mess..."
 rm -rf /etc/SystemHostsBlocker
 echo "You should be reset back to the stashed hosts file now!"
