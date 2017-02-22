@@ -3,6 +3,8 @@ A simple host blocker built for speed.
 
 SimpleHostBlocker is an alternative to an ad blocker that works system wide, even when outside of a browser. This means it can block ads and trackers and games and keep your privacy protected. All outside sources used for gathering hosts will be included here in the Readme file and/or the host file itself.
 
+**If you'd like to donate, you can do so by purchacing an [Amazon eCard](https://www.amazon.com/Amazon-Amazon-com-eGift-Cards/dp/BT00DC6QU4) and sending it to my email, nathanaccidentally@gmail.com**
+
 ## Blocks Ads
 As well as speeding up your browser, SystemHostsBlocker also blocks ads and trackers and can prevent you from spyware, malicious ads, and popups that take up your whole page. This works by blocking the host of the ads.
 
