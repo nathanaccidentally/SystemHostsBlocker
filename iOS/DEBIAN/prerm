@@ -2,9 +2,13 @@
 
 if [[ $1 == remove ]]; then
 
+echo "Changing Activator permissions to root on uninstall..."
+chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
+echo "Done changing permissions it should be safe to uninstall!"	
+
 echo "Restoring stashed host file..."
 blines=$(cat /etc/hosts | wc -l)
-	echo "Before removal, you have $blines lines in your hosts file."
+echo "Before removal, you have $blines lines in your hosts file."
 cp -a /etc/SystemHostsBlocker/StashedHosts/originalhosts /etc/hosts
 echo "Restore completed. Fixing permissions..."
 chmod 644 /etc/hosts
@@ -15,7 +19,7 @@ killall -9 discoveryd
 killall -9 mDNSResponder
 echo "The Daemons should have died and restarted by now..."
 blines=$(cat /etc/hosts | wc -l)
-	echo "You now have $blines lines in your hosts file."
+echo "You now have $blines lines in your hosts file."
 echo "Removing Activator permissions..."
 ./etc/SystemHostsBlocker/ractivator
 echo "Cleaning up the mess..."
