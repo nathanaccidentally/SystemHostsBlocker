@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Running this script will backup your sudoers file and rewrite my own. Running the script ./ractivator or uninstalling will reverse this.
+
 echo "Enabling Activator root support using sudo..."
 echo "Backing up old sudo file..."
 cp -a /etc/sudoers /etc/SystemHostsBlocker/Sudo/origSudo
@@ -8,4 +10,8 @@ echo "Writing custom file..."
 cp -a /etc/SystemHostsBlocker/Sudo/sudoers /etc/sudoers
 chmod 0400 /etc/sudoers
 chown root:staff /etc/sudoers
-echo "Done! To reverse changes, run 'ractivator'"
+echo "Done!"
+
+echo "Changing scripts owners to root. (Should have happened on install but re-doing just in case)"
+chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers 
+echo "Done! You should be all set!"
