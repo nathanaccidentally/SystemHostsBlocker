@@ -9,3 +9,5 @@ cp -a /etc/SystemHostsBlocker/StashedHosts/stash2 /etc/hosts
 chmod 644 /etc/hosts
 chown root:wheel /etc/hosts
 echo "Done!"
+
+exit

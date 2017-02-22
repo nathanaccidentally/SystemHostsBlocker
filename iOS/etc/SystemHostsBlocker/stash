@@ -10,3 +10,5 @@ chmod 644 /etc/SystemHostsBlocker/StashedHosts/originalhosts
 chown root:wheel /etc/SystemHostsBlocker/StashedHosts/originalhosts
 echo "Stashing hosts file complete..."
 echo "You will restore to this file on uninstall."
+
+exit

@@ -10,3 +10,5 @@ chmod 644 /etc/hosts /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocke
 chown root:wheel /etc/hosts /etc/SystemHostsBlocker/ /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocker/systemhosts
 echo "Done!"
 echo "You'll need to run the enable script to restore functionality."
+
+exit
