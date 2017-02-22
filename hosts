@@ -113,6 +113,7 @@ fe80::1%lo0	localhost
 0.0.0.0 cdn.taboola.com
 0.0.0.0 images.taboola.com
 0.0.0.0 resources.taboola.com
+0.0.0.0 ryortho.com/wp-content/uploads
 
 # Spotify General:
 # spclient.wg.spotify.com
