@@ -53,6 +53,8 @@ else
 	echo "Getting host line ammount..."
 	lines=$(cat /etc/hosts | wc -l)
 	echo "Your hosts file now has $lines lines!"
+	echo "Changing Permissions on Activator scripts to root."
+	chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers 
   echo "Enjoy an ad free iOS with SystemHostsBlocker!"
   echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
   exit 0
