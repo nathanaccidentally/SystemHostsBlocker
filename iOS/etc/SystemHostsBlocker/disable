@@ -15,4 +15,8 @@ chmod 644 /etc/hosts
 chown root:wheel /etc/hosts
 echo "Done!"
 
+echo "Changing script permissions to root. (For security)"
+chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers 
+echo "Done! You should be all set."
+
 exit

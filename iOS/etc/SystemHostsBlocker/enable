@@ -10,4 +10,8 @@ chmod 644 /etc/hosts
 chown root:wheel /etc/hosts
 echo "Done!"
 
+echo "Running security step..."
+chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
+echo "All done!"
+
 exit
