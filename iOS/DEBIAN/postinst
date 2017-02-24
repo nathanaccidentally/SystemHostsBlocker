@@ -30,6 +30,13 @@ then
 	chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers 
   echo "Enjoy an ad free iOS with SystemHostsBlocker!"
   echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
+  
+  echo "Saving MD5Checksums for security checks..."
+  md5sum /etc/SystemHostsBlocker/activator > /etc/SystemHostsBlocker/Security/activator.md5
+  echo "Saved ./activator MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/disable > /etc/SystemHostsBlocker/Security/disable.md5
+  echo "Saved ./disable MD5Sum..."
+
   exit 0
 
 else
@@ -40,6 +47,11 @@ else
   chmod 644 /etc/SystemHostsBlocker/StashedHosts/originalhosts
   chown root:wheel /etc/SystemHostsBlocker/StashedHosts/originalhosts
   echo "Stashing old hosts file complete..."
+  
+  echo "Creating MD5Sum directory..."
+  mkdir /etc/SystemHostsBlocker/Security/
+  echo "Created! Will save MD5Sums after install."
+  
   echo "Running installer..."
 	blines=$(cat /etc/hosts | wc -l)
 	echo "Before installing, you have $blines lines in your hosts file."
