@@ -53,6 +53,8 @@ then
   
   echo "Done saving MD5 Hashsums!"
 
+  chmod u+x /etc/SystemHostsBlocker/activator
+
   exit 0
 
 else
