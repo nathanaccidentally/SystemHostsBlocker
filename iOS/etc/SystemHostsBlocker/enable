@@ -3,15 +3,22 @@
 echo "Attempting to enable System Hosts Blocker..."
 echo "Make sure to run as root."
 
+echo "Running MD5Sum Check..."
+echo "Moving to script directory..."
+cd /etc/SystemHostsBlocker/
+echo "Moved to directory..."
+echo "Starting check..."
+if md5sum -c etc/SystemHostsBlocker/Security/enable.md5; then
+    echo "Heck yeah! Your files were verified! Continuing to run script!"
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Exit." exit
+fi
+
 echo "Restoring to SHB hosts..."
 echo "Overwriting old hosts file..."
 cp -a /etc/SystemHostsBlocker/StashedHosts/stash2 /etc/hosts
 chmod 644 /etc/hosts
 chown root:wheel /etc/hosts
 echo "Done!"
-
-echo "Running security step..."
-chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
-echo "All done!"
 
 exit

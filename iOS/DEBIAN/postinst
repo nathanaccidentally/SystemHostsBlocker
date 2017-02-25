@@ -12,6 +12,10 @@ file="/etc/SystemHostsBlocker/StashedHosts/originalhosts"
 if [ -f "$file" ]
 then
 	echo "$file found. Running update. Not stashing."
+  
+  echo "Creating MD5Sum directory..."
+  mkdir /etc/SystemHostsBlocker/Security/
+
 	blines=$(cat /etc/hosts | wc -l)
 	echo "Before update, you have $blines lines in your hosts file."
   echo "Overwriting old hosts file..."
