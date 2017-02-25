@@ -19,6 +19,15 @@ cp -a /etc/sudoers /etc/SystemHostsBlocker/Sudo/origSudo
 echo "Backed up old sudoers file..."
 echo "Writing custom file..."
 
+echo "Making scripts runnable..."
+chmod u+x enable
+chmod u+x disable
+chmod u+x ractivator
+chmod u+x stash
+chmod u+x restore
+echo "Done!"
+
+
 echo "Appending custom entries to sudoers file..."
 echo "mobile ALL=(root) NOPASSWD:/etc/SystemHostsBlocker/enable" >> /etc/sudoers
 echo "mobile ALL=(root) NOPASSWD:/etc/SystemHostsBlocker/disable" >> /etc/sudoers
