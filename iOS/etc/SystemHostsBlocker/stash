@@ -3,6 +3,17 @@
 echo "Attempting to stash current hosts file..."
 echo "Make sure to run as root."
 
+echo "Running MD5Sum Check..."
+echo "Moving to script directory..."
+cd /etc/SystemHostsBlocker/
+echo "Moved to directory..."
+echo "Starting check..."
+if md5sum -c /etc/SystemHostsBlocker/Security/stash.md5; then
+    echo "Heck yeah! Your files were verified! Continuing to run script!"
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Exit." exit
+fi
+
 echo "Stashing current hosts file..."
 mkdir /etc/SystemHostsBlocker/StashedHosts
 cp -a /etc/hosts /etc/SystemHostsBlocker/StashedHosts/originalhosts
@@ -10,5 +21,9 @@ chmod 644 /etc/SystemHostsBlocker/StashedHosts/originalhosts
 chown root:wheel /etc/SystemHostsBlocker/StashedHosts/originalhosts
 echo "Stashing hosts file complete..."
 echo "You will restore to this file on uninstall."
+
+echo "Running last security step..."
+chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
+echo "All done!"
 
 exit

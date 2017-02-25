@@ -1,17 +1,37 @@
 #!/bin/bash
 
-echo "Running this script will backup your sudoers file and rewrite my own. Running the script ./ractivator or uninstalling will reverse this.
+echo "Running this script will backup your sudoers file and rewrite my own. Running the script ./ractivator or uninstalling will reverse this."
+
+echo "Running MD5Sum Check..."
+echo "Moving to script directory..."
+cd /etc/SystemHostsBlocker/
+echo "Moved to directory..."
+echo "Starting check..."
+if md5sum -c /etc/SystemHostsBlocker/Security/activator.md5; then
+    echo "Heck yeah! Your files were verified! Continuing to run script!"
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Exit." exit
+fi
 
 echo "Enabling Activator root support using sudo..."
 echo "Backing up old sudo file..."
 cp -a /etc/sudoers /etc/SystemHostsBlocker/Sudo/origSudo
 echo "Backed up old sudoers file..."
 echo "Writing custom file..."
-cp -a /etc/SystemHostsBlocker/Sudo/sudoers /etc/sudoers
-chmod 0400 /etc/sudoers
-chown root:staff /etc/sudoers
+
+echo "Making scripts runnable..."
+chmod u+x enable
+chmod u+x disable
+chmod u+x ractivator
+chmod u+x stash
+chmod u+x restore
 echo "Done!"
 
-echo "Changing scripts owners to root. (Should have happened on install but re-doing just in case)"
-chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers 
-echo "Done! You should be all set!"
+cp -a /etc/SystemHostsBlocker/Sudo/sudoers /etc/sudoers
+chmod 0655 /etc/sudoers
+echo "Done!"
+
+
+echo "Running last security step..."
+chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
+echo "All done!"

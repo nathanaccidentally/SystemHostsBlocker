@@ -12,6 +12,10 @@ file="/etc/SystemHostsBlocker/StashedHosts/originalhosts"
 if [ -f "$file" ]
 then
 	echo "$file found. Running update. Not stashing."
+
+  echo "Creating MD5Sum directory..."
+  mkdir /etc/SystemHostsBlocker/Security/
+
 	blines=$(cat /etc/hosts | wc -l)
 	echo "Before update, you have $blines lines in your hosts file."
   echo "Overwriting old hosts file..."
@@ -27,9 +31,31 @@ then
 	lines=$(cat /etc/hosts | wc -l)
 	echo "Your hosts file now has $lines lines!"
 	echo "Changing Permissions on Activator scripts to root."
-	chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers 
+	chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
   echo "Enjoy an ad free iOS with SystemHostsBlocker!"
   echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
+
+  echo "Saving MD5Checksums for security checks..."
+  md5sum /etc/SystemHostsBlocker/activator > /etc/SystemHostsBlocker/Security/activator.md5
+  echo "Saved ./activator MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/disable > /etc/SystemHostsBlocker/Security/disable.md5
+  echo "Saved ./disable MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/enable > /etc/SystemHostsBlocker/Security/enable.md5
+  echo "Saved ./enable MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/ractivator > /etc/SystemHostsBlocker/Security/ractivator.md5
+  echo "Saved ./ractivator MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/restore > /etc/SystemHostsBlocker/Security/restore.md5
+  echo "Saved ./restore MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/stash > /etc/SystemHostsBlocker/Security/stash.md5
+  echo "Saved ./stash MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/Sudo/sudoers > /etc/SystemHostsBlocker/Security/sudoers.md5
+  echo "Saved sudoers MD5Sum..."
+	md5sum /etc/SystemHostsBlocker/Daemons > /etc/SystemHostsBlocker/Security/MD5Daemon.md5
+	echo "Saved daemon MD5Sum..."
+
+  echo "Done saving MD5 Hashsums!"
+  chmod u+x /etc/SystemHostsBlocker/activator
+
   exit 0
 
 else
@@ -40,6 +66,11 @@ else
   chmod 644 /etc/SystemHostsBlocker/StashedHosts/originalhosts
   chown root:wheel /etc/SystemHostsBlocker/StashedHosts/originalhosts
   echo "Stashing old hosts file complete..."
+
+  echo "Creating MD5Sum directory..."
+  mkdir /etc/SystemHostsBlocker/Security/
+  echo "Created! Will save MD5Sums after install."
+
   echo "Running installer..."
 	blines=$(cat /etc/hosts | wc -l)
 	echo "Before installing, you have $blines lines in your hosts file."
@@ -56,8 +87,29 @@ else
 	lines=$(cat /etc/hosts | wc -l)
 	echo "Your hosts file now has $lines lines!"
 	echo "Changing Permissions on Activator scripts to root."
-	chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers 
+	chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
   echo "Enjoy an ad free iOS with SystemHostsBlocker!"
   echo "Still ads somewhere? Please let me know if you find any ads or broken sites!"
+
+
+  echo "Saving MD5Checksums for security checks..."
+  md5sum /etc/SystemHostsBlocker/activator > /etc/SystemHostsBlocker/Security/activator.md5
+  echo "Saved ./activator MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/disable > /etc/SystemHostsBlocker/Security/disable.md5
+  echo "Saved ./disable MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/enable > /etc/SystemHostsBlocker/Security/enable.md5
+  echo "Saved ./enable MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/ractivator > /etc/SystemHostsBlocker/Security/ractivator.md5
+  echo "Saved ./ractivator MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/restore > /etc/SystemHostsBlocker/Security/restore.md5
+  echo "Saved ./restore MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/stash > /etc/SystemHostsBlocker/Security/stash.md5
+  echo "Saved ./stash MD5Sum..."
+  md5sum /etc/SystemHostsBlocker/Sudo/sudoers > /etc/SystemHostsBlocker/Security/sudoers.md5
+  echo "Saved sudoers MD5Sum..."
+
+  echo "Done saving MD5 Hashsums!"
+	chmod u+x /etc/SystemHostsBlocker/activator
+
   exit 0
 fi
