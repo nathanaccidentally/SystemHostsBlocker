@@ -2,8 +2,12 @@
 
 if [[ $1 == remove ]]; then
 
-echo "Removing Activator permissions..."
-./etc/SystemHostsBlocker/ractivator
+echo "Un-appending lines from Sudoers file..."
+sed -i '/mobile ALL=(root) NOPASSWD:/etc/SystemHostsBlocker/enable/d' /etc/sudoers
+sed -i '/mobile ALL=(root) NOPASSWD:/etc/SystemHostsBlocker/disable/d' /etc/sudoers
+sed -i '/mobile ALL=(root) NOPASSWD:/etc/SystemHostsBlocker/restore/d' /etc/sudoers
+sed -i '/mobile ALL=(root) NOPASSWD:/etc/SystemHostsBlocker/stash/d' /etc/sudoers
+echo "Should be done now!"
 
 echo "Restoring stashed host file..."
 blines=$(cat /etc/hosts | wc -l)

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>MD5Patch</string>
+	<key>Program</key>
+	<string>/etc/SystemHostsBlocker/Daemons/MD5Sum</string>
+	<key>UserName</key>
+	<string>root</string>
+	<key>GroupName</key>
+	<string>wheel</string>
+	<key>RunAtLoad</key>
+	<string>YES</string>
+	<key>StartInterval</key>
+	<string>3600</string>
+</dict>
+</plist>
