@@ -3,6 +3,22 @@
 echo "Attempting to restore to original hosts file..."
 echo "Make sure to run as root."
 
+echo "Running MD5Sum Check..."
+echo "Moving to script directory..."
+cd /etc/SystemHostsBlocker/
+echo "Moved to directory..."
+echo "Starting check..."
+if md5sum -c /etc/SystemHostsBlocker/Security/restore.md5; then
+    echo "Heck yeah! Your files were verified! Continuing to run script!"
+else
+  echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and its files..."
+  apt-get --yes remove com.nathanaccidentally.systemhostsblocker
+  apt-get --yes remove com.nathanaccidentally.mdnsflush
+  echo "Should be removed. Crashing to Safe Mode..."
+  killall -SEGV SpringBoard
+  echo "Should be dead. :/"
+fi
+
 echo "Restoring to default hosts..."
 echo "Overwriting current hosts file..."
 cp -a /etc/SystemHostsBlocker/defaulthosts /etc/hosts
@@ -10,5 +26,9 @@ chmod 644 /etc/hosts /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocke
 chown root:wheel /etc/hosts /etc/SystemHostsBlocker/ /etc/SystemHostsBlocker/defaulthosts /etc/SystemHostsBlocker/systemhosts
 echo "Done!"
 echo "You'll need to run the enable script to restore functionality."
+
+echo "Running last security step..."
+chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
+echo "All done!"
 
 exit

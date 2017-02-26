@@ -1,6 +1,6 @@
 Package: com.nathanaccidentally.systemhostsblocker
 Name: System Hosts Blocker
-Version: 1.4.1-patch
+Version: 1.4.2
 Architecture: iphoneos-arm
 Pre-Depends: dpkg (>= 1.13.25-5)
 Depends: com.nathanaccidentally.mdnsflush, sudo

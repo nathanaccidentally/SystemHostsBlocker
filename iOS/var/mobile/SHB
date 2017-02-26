@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /etc/SystemHostsBlocker/
+
+echo "Welcome to the SystemHostsBlocker Terminal directory! You can find documentation on the GitHub wiki."
+
+exit
