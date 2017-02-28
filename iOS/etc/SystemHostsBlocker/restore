@@ -11,7 +11,12 @@ echo "Starting check..."
 if md5sum -c /etc/SystemHostsBlocker/Security/restore.md5; then
     echo "Heck yeah! Your files were verified! Continuing to run script!"
 else
-    echo "We couldn't verify this script is genuine. It may have been tempered with. Exit." exit
+  echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and its files..."
+  apt-get --yes remove com.nathanaccidentally.systemhostsblocker
+  apt-get --yes remove com.nathanaccidentally.mdnsflush
+  echo "Should be removed. Crashing to Safe Mode..."
+  killall -SEGV SpringBoard
+  echo "Should be dead. :/"
 fi
 
 echo "Restoring to default hosts..."

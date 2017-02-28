@@ -50,8 +50,6 @@ then
   echo "Saved ./stash MD5Sum..."
   md5sum /etc/SystemHostsBlocker/Sudo/sudoers > /etc/SystemHostsBlocker/Security/sudoers.md5
   echo "Saved sudoers MD5Sum..."
-	md5sum /etc/SystemHostsBlocker/Daemons > /etc/SystemHostsBlocker/Security/MD5Daemon.md5
-	echo "Saved daemon MD5Sum..."
 
   echo "Done saving MD5 Hashsums!"
   chmod u+x /etc/SystemHostsBlocker/activator

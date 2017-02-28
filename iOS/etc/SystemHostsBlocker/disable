@@ -11,7 +11,12 @@ echo "Starting check..."
 if md5sum -c /etc/SystemHostsBlocker/Security/disable.md5; then
     echo "Heck yeah! Your files were verified! Continuing to run script!"
 else
-    echo "We couldn't verify this script is genuine. It may have been tempered with. Exit." exit
+  echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and its files..."
+  apt-get --yes remove com.nathanaccidentally.systemhostsblocker
+  apt-get --yes remove com.nathanaccidentally.mdnsflush
+  echo "Should be removed. Crashing to Safe Mode..."
+  killall -SEGV SpringBoard
+  echo "Should be dead. :/"
 fi
 
 echo "Creating Stash2 (For running enable script.)"
@@ -27,7 +32,7 @@ chown root:wheel /etc/hosts
 echo "Done!"
 
 echo "Running last security step..."
-chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers 
+chown root:wheel /etc/SystemHostsBlocker/activator /etc/SystemHostsBlocker/enable /etc/SystemHostsBlocker/disable /etc/SystemHostsBlocker/ractivator /etc/SystemHostsBlocker/restore /etc/SystemHostsBlocker/stash /etc/SystemHostsBlocker/systemhosts /etc/SystemHostsBlocker/Sudo/sudoers
 echo "All done!"
 
 exit

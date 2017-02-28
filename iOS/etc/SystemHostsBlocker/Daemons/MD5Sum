@@ -1,0 +1,136 @@
+#!/bin/bash
+
+echo "Running MD5 Hash checks..."
+
+echo "Moving to script directory..."
+cd /etc/SystemHostsBlocker/
+echo "Done moving..."
+
+if md5sum /etc/SystemHostsBlocker/Daemons/MD5Sum -c etc/SystemHostsBlocker/Security/MD5Daemon.md5; then
+    echo "Your scripts were verified! No need to do anything."
+else
+    echo "Couldn't verify daemon..."
+
+    echo "Removing SHB and all its files..."
+    apt-get remove --yes com.nathanaccidentally.systemhostsblocker
+    echo "SHB Removed..."
+    echo "Removing mDNSFlush..."
+    apt-get remove --yes com.nathanaccidentally.mdnsflush
+    echo "mDNSFlush Removed..."
+
+    echo "Re-launching SpringBoard in Safe Mode..."
+    killall -SEGV SpringBoard
+    echo "Should have died by now..."
+fi
+
+echo "Checking Activator script..."
+if md5sum activator -c etc/SystemHostsBlocker/Security/activator.md5; then
+    echo "Your scripts were verified! No need to do anything."
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and going into Safe Mode."
+
+    echo "Removing SHB and all its files..."
+    apt-get remove --yes com.nathanaccidentally.systemhostsblocker
+    echo "SHB Removed..."
+    echo "Removing mDNSFlush..."
+    apt-get remove --yes com.nathanaccidentally.mdnsflush
+    echo "mDNSFlush Removed..."
+
+    echo "Re-launching SpringBoard in Safe Mode..."
+    killall -SEGV SpringBoard
+    echo "Should have died by now..."
+fi
+
+echo "Checking Disable script..."
+if md5sum disable -c etc/SystemHostsBlocker/Security/disable.md5; then
+    echo "Your scripts were verified! No need to do anything."
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and going into Safe Mode."
+
+    echo "Removing SHB and all its files..."
+    apt-get remove --yes com.nathanaccidentally.systemhostsblocker
+    echo "SHB Removed..."
+    echo "Removing mDNSFlush..."
+    apt-get remove --yes com.nathanaccidentally.mdnsflush
+    echo "mDNSFlush Removed..."
+
+    echo "Re-launching SpringBoard in Safe Mode..."
+    killall -SEGV SpringBoard
+    echo "Should have died by now..."
+fi
+
+echo "Checking Enable script..."
+if md5sum enable -c etc/SystemHostsBlocker/Security/enable.md5; then
+    echo "Your scripts were verified! No need to do anything."
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and going into Safe Mode."
+
+    echo "Removing SHB and all its files..."
+    apt-get remove --yes com.nathanaccidentally.systemhostsblocker
+    echo "SHB Removed..."
+    echo "Removing mDNSFlush..."
+    apt-get remove --yes com.nathanaccidentally.mdnsflush
+    echo "mDNSFlush Removed..."
+
+    echo "Re-launching SpringBoard in Safe Mode..."
+    killall -SEGV SpringBoard
+    echo "Should have died by now..."
+fi
+
+echo "Checking rActivator script..."
+if md5sum ractivator -c etc/SystemHostsBlocker/Security/ractivator.md5; then
+    echo "Your scripts were verified! No need to do anything."
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and going into Safe Mode."
+
+    echo "Removing SHB and all its files..."
+    apt-get remove --yes com.nathanaccidentally.systemhostsblocker
+    echo "SHB Removed..."
+    echo "Removing mDNSFlush..."
+    apt-get remove --yes com.nathanaccidentally.mdnsflush
+    echo "mDNSFlush Removed..."
+
+    echo "Re-launching SpringBoard in Safe Mode..."
+    killall -SEGV SpringBoard
+    echo "Should have died by now..."
+fi
+
+echo "Checking Restore script..."
+if md5sum restore -c etc/SystemHostsBlocker/Security/restore.md5; then
+    echo "Your scripts were verified! No need to do anything."
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and going into Safe Mode."
+
+    echo "Removing SHB and all its files..."
+    apt-get remove --yes com.nathanaccidentally.systemhostsblocker
+    echo "SHB Removed..."
+    echo "Removing mDNSFlush..."
+    apt-get remove --yes com.nathanaccidentally.mdnsflush
+    echo "mDNSFlush Removed..."
+
+    echo "Re-launching SpringBoard in Safe Mode..."
+    killall -SEGV SpringBoard
+    echo "Should have died by now..."
+fi
+
+echo "Checking Stash script..."
+if md5sum stash -c etc/SystemHostsBlocker/Security/stash.md5; then
+    echo "Your scripts were verified! No need to do anything."
+else
+    echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and going into Safe Mode."
+
+    echo "Removing SHB and all its files..."
+    apt-get remove --yes com.nathanaccidentally.systemhostsblocker
+    echo "SHB Removed..."
+    echo "Removing mDNSFlush..."
+    apt-get remove --yes com.nathanaccidentally.mdnsflush
+    echo "mDNSFlush Removed..."
+
+    echo "Re-launching SpringBoard in Safe Mode..."
+    killall -SEGV SpringBoard
+    echo "Should have died by now..."
+fi
+
+echo "Looks like your device passed all the tests! Quitting!"
+
+exit

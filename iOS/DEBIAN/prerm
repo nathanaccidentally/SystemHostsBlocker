@@ -2,6 +2,9 @@
 
 if [[ $1 == remove ]]; then
 
+echo "Removing Activator permissions..."
+./etc/SystemHostsBlocker/ractivator
+
 echo "Restoring stashed host file..."
 blines=$(cat /etc/hosts | wc -l)
 echo "Before removal, you have $blines lines in your hosts file."
