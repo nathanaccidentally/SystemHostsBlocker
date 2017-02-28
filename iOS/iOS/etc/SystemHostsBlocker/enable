@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "Attempting to enable System Hosts Blocker..."
+echo "Make sure to run as root."
+
+echo "Running MD5Sum Check..."
+echo "Moving to script directory..."
+cd /etc/SystemHostsBlocker/
+echo "Moved to directory..."
+echo "Starting check..."
+if md5sum -c /etc/SystemHostsBlocker/Security/enable.md5; then
+    echo "Heck yeah! Your files were verified! Continuing to run script!"
+else
+  echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and its files..."
+  apt-get --yes remove com.nathanaccidentally.systemhostsblocker
+  apt-get --yes remove com.nathanaccidentally.mdnsflush
+  echo "Should be removed. Crashing to Safe Mode..."
+  killall -SEGV SpringBoard
+  echo "Should be dead. :/"
+fi
+
+echo "Restoring to SHB hosts..."
+echo "Overwriting old hosts file..."
+cp -a /etc/SystemHostsBlocker/StashedHosts/stash2 /etc/hosts
+chmod 644 /etc/hosts
+chown root:wheel /etc/hosts
+echo "Done!"
+
+exit
