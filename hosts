@@ -114,6 +114,7 @@ fe80::1%lo0	localhost
 0.0.0.0 ryortho.com
 0.0.0.0 ads.mopub.com
 0.0.0.0 aax-us-east.amazon-adsystem.com
+0.0.0.0 adclick.g.doubleclick.net
 
 # iOS OTA/Updates
 0.0.0.0 mesu.apple.com
