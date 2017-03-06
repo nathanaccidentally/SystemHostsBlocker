@@ -5,7 +5,7 @@ echo "Moving to script directory..."
 cd /etc/SystemHostsBlocker/
 echo "Moved to directory..."
 echo "Starting check..."
-if md5sum -c etc/SystemHostsBlocker/Security/ractivator.md5; then
+if md5sum -c /etc/SystemHostsBlocker/Security/ractivator.md5; then
     echo "Heck yeah! Your files were verified! Continuing to run script!"
 else
   echo "We couldn't verify this script is genuine. It may have been tempered with. Removing SHB and its files..."
