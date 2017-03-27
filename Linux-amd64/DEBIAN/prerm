@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ $1 == remove ]]; then
+
+echo "Restoring stashed host file..."
+blines=$(cat /etc/hosts | wc -l)
+echo "Before removal, you have $blines lines in your hosts file."
+cp -a /etc/SystemHostsBlocker/StashedHosts/originalhosts /etc/hosts
+echo "Restore completed. Fixing permissions..."
+chmod 644 /etc/hosts
+blines=$(cat /etc/hosts | wc -l)
+echo "You now have $blines lines in your hosts file."
+echo "Cleaning up the mess..."
+rm -rf /etc/SystemHostsBlocker
+echo "You should be reset back to the stashed hosts file now!"
+exit 0
+
+else
+
+exit 0
+
+fi
